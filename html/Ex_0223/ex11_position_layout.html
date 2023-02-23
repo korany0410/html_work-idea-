@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position layout</title>
+    <link rel="stylesheet" href="css/reset.css">
+<!--    link 가져오기-->
+    <style>
+        /*#header{*/
+        /*    width: 1000px; height: 80px;*/
+        /*    margin: 10px auto; !* 위아래 마진은 10px, 좌우 마진 가운데 정렬!*!*/
+        /*    border: 2px solid silver;*/
+        /*    position: relative;*/
+        /*    !* absolute속성을 가진 자식을 내 자식으로 인지하도록 하는 코드!!*/
+        /*        자식에서 absolute와 부모에서 relative는 세트!!*/
+        /*    *!*/
+        /*}*/
+        /*.nyang_img_left{*/
+        /*    position: absolute; left: 6px; top: 6px;*/
+        /*    !* header의 자식에서 벗어나 이미지가 따로 떨어져서 header기준 (6,6)이동 *!*/
+        /*}*/
+        /*ul{ overflow: hidden;}*/
+        /*li{ float: left;}*/
+
+        /*.nyang_img_right{ position: absolute; right: 6px; top: 6px;}*/
+
+        /*.login_menu{position: absolute; left: 350px; top: 10px;}*/
+        /*.lesson_menu{ position: absolute; left: 225px; top: 40px;}*/
+
+        #header{ width: 1000px; height: 100px;
+            border: 2px solid gray;
+            margin: 20px auto;
+            /*position: relative;*/
+        }
+        .nyang_img_left{
+            position: absolute; left: 6px; right: 6px;
+        }
+        li{float: left;}
+        ul{overflow: hidden;}
+    </style>
+</head>
+<body>
+<div id="header">
+    <p class="nyang_img_left">
+        <img src="image/nyang2.jpg" width="70">
+    </p>
+    <ul class="login_menu">
+        <li><img src="image/menu_13.jpg" alt=""></li>
+        <li><img src="image/menu_14.jpg" alt=""></li>
+        <li><img src="image/menu_15.jpg" alt=""></li>
+        <li><img src="image/menu_16.jpg" alt=""></li>
+        <li><img src="image/menu_17.jpg" alt=""></li>
+        <li><img src="image/menu_18.jpg" alt=""></li>
+        <li><img src="image/menu_19.jpg" alt=""></li>
+        <li><img src="image/menu_20.jpg" alt=""></li>
+        <li><img src="image/menu_21.jpg" alt=""></li>
+    </ul>
+    <ul class="lesson_menu">
+        <li><img src="image/menu01_12.jpg" alt=""></li>
+        <li><img src="image/menu01_13.jpg" alt=""></li>
+        <li><img src="image/menu01_14.jpg" alt=""></li>
+        <li><img src="image/menu01_15.jpg" alt=""></li>
+        <li><img src="image/menu01_16.jpg" alt=""></li>
+        <li><img src="image/menu01_17.jpg" alt=""></li>
+        <li><img src="image/menu01_18.jpg" alt=""></li>
+        <li><img src="image/menu01_19.jpg" alt=""></li>
+    </ul>
+    <p class="nyang_img_right"><img src="image/nyang3.jpg" width="70"></p>
+</div>
+<!-- /#header -->
+</body>
+</html>

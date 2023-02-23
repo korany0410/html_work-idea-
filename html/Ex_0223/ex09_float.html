@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float 정렬을 통한 layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 650px;
+            margin: 0 auto;
+            border: 5px solid gray;
+            background: white;
+        }
+
+        #header {
+            background: gray;
+            margin-bottom: 10px;
+            text-align: center;
+            padding: 10px 0;
+            color: azure;
+            font: 20px bold;
+        }
+
+        #content {
+            margin-bottom: 10px;
+            overflow: hidden;
+            /* 자식에게 float이 있다면 꼭 넣는다고 생각하기   */
+        }
+
+        .left {
+            float: left;
+            width: 180px;
+            height: 250px;
+            padding: 10px;
+            background: aliceblue;
+        }
+
+        .center {
+            float: left;
+            width: 180px;
+            height: 250px;
+            padding: 10px;
+            background: aliceblue;
+            margin-left: 25px;
+        }
+        .right {
+            float: left;
+            width: 180px;
+            height: 250px;
+            padding: 10px;
+            background: aliceblue;
+            margin-left: 25px;
+        }
+        #footer{ background: gray;
+            text-align: center;
+            padding: 10px 0;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="header">
+        <p>header</p>
+    </div>
+    <!-- /#header -->
+    <div id="content">
+        <p class="left">
+            left
+        </p>
+        <p class="center">
+            center
+        </p>
+        <p class="right">
+            right
+        </p>
+    </div>
+    <!-- /#content -->
+    <div id="footer">
+        <!--<editor-fold desc="아래에 들어갈 내용">-->
+        <span>
+            <p>footer</p>
+        </span>
+        <!--</editor-fold>-->
+    </div>
+    <!-- /#footer -->
+</div>
+<!-- /#wrap -->
+</body>
+</html>

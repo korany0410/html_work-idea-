@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>overflow</title>
+  <style>
+      p{ border: 1px solid black;
+        padding: 5px;
+        width: 170px;
+        height: 50px;
+      }
+      .a2{overflow: hidden;} /* 내용이 지정된 테두리 영역을 벗어나면 보이지 않게 함*/
+      .a3{overflow: scroll;} /* 내용이 넘치는것과는 별개로 무조건 스크롤을 만드는 속성 */
+      .a4{overflow:auto; } /* 가로 스크롤 없이 내용이 넘칠때만 세로 스크롤만 표기! */
+      .a5{overflow: visible;} /* 기본 설정 값 넘치는 내용을 다 표시함 */
+  </style>
+</head>
+<body>
+  <p class="a1">
+    overflow 지정안함  a1  adkfsfiensldkfj;slkgjiehas;ksjdfkjsdisejsd;fksjienfsdflskdjfsk
+  </p>
+  <p class="a2">
+    .a2{overflow: hidden;} overflow 예제 a2 내용이 지정된 테두리 영역을 벗어나면 보이지 않게 함
+  </p>
+  <p class="a3">
+    .a3{overflow: scroll;} overflow 예제 a3 adkfsfiensldkfj;slkgjiehas;ksjdfkjsdisejsd;fksjienfsdflskdjfsk
+  </p>
+  <p class="a4">
+    .a4{overflow:auto; } overflow 예제 a4 adkfsfiensldkfj;slkgjiehas;ksjdfkjsdisejsd;fksjienfsdflskdjfsk
+  </p>
+  <p class="a5">
+    .a5{overflow: visible;} overflow 예제 a5 adkfsfiensldkfj;slkgjiehas;ksjdfkjsdisejsd;fksjienfsdflskdjfsk
+  </p>
+
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>layout 정의</title>
+    <link rel="stylesheet" href="css/reset.css">
+<!--/*외부스타일시트*/-->
+    <style>
+        header{width: 960px; height: 150px;
+            margin: 0 auto;
+            /*border: 1px solid cornflowerblue;*/
+            position: relative;
+        }
+        #hgroup{position: absolute; left: 5px; top: 10px;}
+
+        li{ float: left;}
+    /*    menu1정의*/
+        #menu1 ul{overflow: hidden;}
+        #menu1{position: absolute; right: 0; top: 3px;}
+        #menu1 ul li {border-right:1px solid gray;
+                border-top: 1px solid gray;
+                border-bottom: 1px solid gray;
+        }
+        #menu1 ul li:first-child{border-left: 1px solid gray;}
+
+        #menu1 a{display: block;
+            padding: 5px 2px;
+            color: cornflowerblue;
+            width: 100px;
+            text-align: center;
+        }
+        #menu1 ul li a:hover{ background: cornflowerblue; color: white}
+
+
+        /*    menu2정의*/
+        #menu2 ul{overflow: hidden;}
+        #menu2{position: absolute; right: 0; bottom: 0;}
+        #menu2 ul li {border-right:1px solid gray;
+            border-top: 1px solid gray;
+            border-bottom: 1px solid gray;
+        }
+        #menu2 ul li:first-child{border-left: 1px solid gray;}
+
+        #menu2 a{display: block;
+            padding: 15px 2px;
+            color: cornflowerblue;
+            font-weight: bold;
+            font: 20px "Bell MT" ;
+            width: 150px;
+            text-align: center;
+        }
+        #menu2 ul li a:hover{ background: cornflowerblue; color: white}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="hgroup">
+            <h1>Rink development</h1>
+            <h2>HTML + CSS</h2>
+        </div>
+<!--       상단 메뉴1-->
+        <div id="menu1">
+            <ul>
+                <li><a href="#">web</a></li>
+                <li><a href="#">moblie</a></li>
+                <li><a href="#">game</a></li>
+                <li><a href="#">simulation</a></li>
+                <li><a href="#">data</a></li>
+            </ul>
+        </div>
+<!--        상단메뉴2-->
+        <div id="menu2">
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">JQuery</a></li>
+                <li><a href="#">JSP</a></li>
+            </ul>
+        </div>
+    </header>
+</body>
+</html>

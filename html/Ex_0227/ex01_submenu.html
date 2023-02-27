@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>서브메뉴 만들기</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #nav {
+            width: 1000px;
+            height: 45px;
+            padding: 6px 7px;
+            background: #999999;
+            margin: 0 auto;
+        }
+
+        /*    자식 선택자를 통해 직계 li에게만 속성을 적용 */
+        #nav > li {
+            float: left;
+            position: relative;
+            margin: 3px 10px;
+            margin-left: 60px;
+            text-align: center;
+        }
+
+        #nav li a {
+            display: block;
+            font: bold 20px sans-serif;
+            color: #eeeeee;
+            padding: 10px 20px;
+        }
+
+        /*li에 마우스를 올리면 그 안의 a태그에 속성을 추가하기 */
+        #nav li:hover a {
+            background: white;
+            color: #333333;
+        }
+
+        #nav ul {
+            width: 150px;
+            border: 1px solid #999999;
+            position: absolute;
+            left: 0;
+            top: 45px;
+        }
+
+        /* 하위메뉴 숨기기 */
+        #nav > li > ul {
+            display: none;
+        }
+
+        /* 상위메뉴에 마우스 올리면 그 안의 ul하위메뉴들 보이게 하기! */
+        #nav li:hover ul {
+            display: block;
+        }
+
+        /* 하위메뉴 글씨 두께 얇게 하기 */
+        #nav li ul li a {
+            font-weight: normal;
+        }
+
+        /* a 태그에 마우스 올렸을 때 배경 색 바뀌게 하기 */
+        #nav li ul li:hover a {
+            background: #999999;
+            font-weight: bold;
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+<ul id="nav">
+    <li><a href="#">처음으로</a></li>
+
+    <li><a href="#">여행안내</a>
+        <ul>
+            <li><a href="#">소개합니다</a></li>
+            <li><a href="#">오시는 길</a></li>
+        </ul>
+    </li>
+    <li><a href="#">이용방법</a>
+        <ul>
+            <li><a href="#">객실요금</a></li>
+            <li><a href="#">요금안내</a></li>
+            <li><a href="#">예약하기</a></li>
+            <li><a href="#">예약확인</a></li>
+        </ul>
+    </li>
+    <li><a href="#">게시판</a>
+        <ul>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">Q&A</a></li>
+        </ul>
+    </li>
+    <li><a href="#">사이트 맵</a></li>
+
+</ul>
+<!-- /#id -->
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition</title>
+    <style>
+        .t {
+            width: 100px;
+            height: 100px;
+            background: #fed9ff;
+            border-radius: 0px;
+            transition-property: background-color, border-radius;
+            transition-duration: 1s;
+            /*    1초에 걸쳐 배경색과테두리를 변경할 예정*/
+            transition-delay: 2s;
+            /*    2초 후에 변경*/
+
+            -moz-transition-property: background-color, border-radius;
+            -moz-transition-duration: 1s;
+            /*    1초에 걸쳐 배경색과테두리를 변경할 예정*/
+            -moz-transition-delay: 2s;
+            /*    2초 후에 변경*/
+
+            -o-transition-property: background-color, border-radius;
+            -o-transition-duration: 1s;
+            /*    1초에 걸쳐 배경색과테두리를 변경할 예정*/
+            -o-transition-delay: 2s;
+            /*    2초 후에 변경*/
+
+        }
+        /*
+             브라우저마다 애니메이션 처리가 안 될 가능성이 있기때문에 적용시켜줌
+            -moz- : firefox
+            -o- : opera
+            -ms- : explorer
+            -webkit- chrome, safari
+         */
+
+        .t:hover {
+            background: #ff22aa;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="t">
+
+</div>
+<!-- /.t -->
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>single for</title>
+    <script !src="">
+        // 주의! int가 아닌 let을 써줘야 함
+        for (let i = 1; i < 5; i++) {
+            document.write(i, "<br>");
+        }
+        document.write("<hr>");
+
+        // 원하는 값을 prompt로 입력받고 해당 값에 대해 구구단 출력하기
+        var num = prompt("숫자를 입력하세요");
+        for( var i = 1; i<=9; i++){
+            document.write(num ," * ", i, "=" , num * i , "<br>");
+        }
+
+        document.write("<hr>");
+
+        for (var i = 6; i >= 1; i--) {
+            document.write('<h', i, '>' + "자바스크립트 h태그" + '</h', i, '>');
+        }
+
+        document.write("<hr>");
+
+        document.write("<ul>");
+        for (var i = 1; i <= 5; i++) {
+            document.write('<li>메뉴', i, "</li>");
+        }
+        document.write("</ul>");
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

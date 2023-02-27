@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table 스타일 정의 1</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        table, td, th {
+            border-collapse: collapse;
+            border-color: darkgrey;
+            color: black;
+        }
+
+        table {
+            width: 900px;
+            height: 450px;
+            margin: 0 auto;
+            background: whitesmoke;
+        }
+
+        caption {
+            font: bold 25px sans-serif;
+            margin-bottom: 20px;
+        }
+
+        th {
+            font-size: 18px;
+            width: 100px;
+        }
+
+        /*    th는 자동 가운데 정렬됨 */
+
+        thead th {
+            padding: 15px 0;
+            background: lightgray;
+            border-bottom: 5px solid darkgrey;
+        }
+        td{
+            height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<table border="1">
+    <caption>업종별 모범거래기준 주요 내용</caption>
+    <thead>
+    <tr align="center">
+        <th>구분</th>
+        <th>제빵</th>
+        <th>피자</th>
+        <th>치킨</th>
+        <th>커피</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>영업지역</th>
+        <td class="a">500m</td>
+        <td class="a">1,500m</td>
+        <td class="a">800m</td>
+        <td class="a">500m</td>
+    </tr>
+    <tr>
+        <th>광고</th>
+        <td>관련내용 없음</td>
+        <td>총광고비 본사와 <br> 사전 동의 <br>광고비 송부</td>
+        <td>총광고비 본사와 <br> 사전 동의 <br>광고비 송부</td>
+        <td>관련내용 없음</td>
+    </tr>
+    <tr>
+        <th>대금 지급</th>
+        <td>본사와 협의</td>
+        <td>본사와 협의</td>
+        <td>관련 내용 없음</td>
+        <td>본사와 협의</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

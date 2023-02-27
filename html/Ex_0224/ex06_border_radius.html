@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>border radius</title>
+  <style>
+      h1{
+        float: left;
+        margin: 10px;
+        width: 200px;
+        padding: 80px 0;
+        text-align: center;
+        border: 1px solid cornflowerblue;
+        color: cornflowerblue;
+      }
+      h1:nth-child(1){border-radius: 20px;}
+      h1:nth-child(2){border-radius: 70px;}
+      h1:nth-child(3){border-radius: 20px 50px;}
+      h1:nth-child(4){border-radius: 20px 50px 80px;
+        font-size: 20px;
+      }
+      h1:nth-child(5){border-radius: 10px 25px 50px 80px ;
+        font-size: 16px;
+      }
+      img{ border-radius: 250px;}
+  </style>
+</head>
+<body>
+    <h1>radius 20px</h1>
+    <h1>radius 70px</h1>
+    <h1>20px 50px <br> 좌상 우하 </h1>
+    <h1>20px 50px 80px <br>좌상, 우상좌하, 우하</h1>
+    <h1>10px 25px 50px 80px<br>좌상, 우상, 우하, 좌하</h1>
+    <img src="image/nyang2.jpg" alt="" width="250px">
+</body>
+</html>

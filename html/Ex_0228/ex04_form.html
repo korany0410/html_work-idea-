@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form 태그</title>
+
+    <script !src="">
+        function check1() {
+            //f1이라는 id를 가진 form 태그 검색
+            let f = document.getElementById("f1");
+
+            //검색한 form 태그인 f를 통해 id라는 name속성을 가진 태그로 접근
+            let id = f.id.value;
+            let pwd = f.pwd.value;
+            let age = f.age.value;
+
+            //유효성 체크
+            if (id == '') {
+                alert("아이디는 반드시 입력해야합니다");
+                return;
+            }
+            if (pwd == '') {
+                alert("비밀번호를 입력하세요");
+                return;
+            }
+
+            //전송방식
+            //GET : 파라미터를 url에 노출, 보안성이 떨어지지만 속도가 빠른 편
+            //POST : 파라미터가 url에 노출되지 않음, 속도가 느린 편이지만 보안성 우수
+            f.method = "post";
+
+            //파라미터를 받고싶은 페이지를 action에 지정해준다.
+            f.action = "login.jsp";
+
+            //입력된 데이터(form안의 name으로 설정된 값)을 서버측으로 전송
+            f.submit();
+        }//check1()
+
+        function check2(){
+
+            //name이 fff로 지정되어있는 form태그 가져오기
+            let f = document.fff;
+            let id = f.id.value;
+            let pwd = f.pwd.value;
+
+            //유효성 검사 했다 치고
+
+            // f.method = "get";
+            // f.action = "Login.jsp";
+
+            f.submit();
+        }//check2()
+
+    </script>
+
+</head>
+<body>
+<!--서버로 값을 전송하기 위해 데이터를 스크립트 영역으로 옮겨주기 위한 태그-->
+<form id="f1">
+    <table border="1">
+        <tr>
+            <th>아이디</th>
+            <td><input name="id"></td>
+            <!--name속성은 id와 비슷하지만input,text area 태그 등의 정해진
+                일부 태그에서만 사용이 가능하며 , form태그 밖에서 name속성을 정의하는것은 의미가 없다!
+            -->
+        </tr>
+        <tr>
+            <th>비밀번호</th>
+            <td><input type="password" name="pwd"></td>
+
+        </tr>
+        <tr>
+            <th>나이</th>
+            <td><input name="age"></td>
+
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="button" value="폼체크1" onclick="check1();">
+            </td>
+        </tr>
+    </table>
+</form>
+<hr>
+<form name="fff" method="get" action="Login.jsp">
+    id : <input name="id"> <br>
+    pwd : <input name="pwd"> <br>
+    <input type="button" value="폼체크2" onclick="check2();">
+</form>
+<hr>
+</body>
+</html>

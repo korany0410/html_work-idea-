@@ -44,6 +44,21 @@
 
         }
 
+        let b_show = true;
+        function show(){
+            b_show = !b_show;
+            //b_show가 호출될때마다 변경이 된다
+
+            let btn = document.getElementById("btn_show");
+
+            b_show ? btn.value = "숨기기" : btn.value = "보이기";
+
+            //div검색 및 숨기기 처리
+            let div = document.getElementById("disp");
+            //        #disp{display:block} 아래와 같다
+            b_show ? div.style.display = 'block': div.style.display = 'none';
+            // 스타일시트 없이 스타일 변경 방법
+        }
 
     </script>
     <style>
@@ -66,6 +81,7 @@
 <div>
     단 : <input id="dan">
     <input type="button" value="결과보기" onclick="start();">
+    <input type="button" value="숨기기" id="btn_show" onclick="show();">
 </div>
 <hr>
 <div id="disp"></div>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>method</title>
+    <script !src="">
+        let aa = "결과 : ";
+        //일반적인 전역변수 설정은 문제가 되지 않는다.
+
+        //태그를 검색하는 코드는 '절대' 전역으로 지정할 수 없다
+        // let a2 = document.getElementById("res2");
+
+        function test1() {
+            //function 키워드로 시작하는 js 메서드는 반환형을 가지고 있지 않다
+            let res = document.getElementById('res2');
+            alert(aa + res.value);
+
+
+        }
+
+        function test2(n) {
+            // 파라미터를 받을 때 타입을 따로 지정하지 않는다.
+            // n의 값에 숫자나 문자 데이터 타입 상관없이 넘겨줄 수 있다.
+            //alert(n);
+
+            //지역변수이기 때문에 변수명 중복돼도 상관없음
+            let res = document.getElementById('res1');
+            //너무 중요
+            // res가 밑의 input #res1과 완전히 동일해진다.
+            res.value = n;
+        }
+
+        function test3() {
+                let h_tag = document.getElementById("h1");
+                // h_tag == #h1
+                // h_tag.innerHTML = "innerHtml";
+            // innerHtml은 외부의 공격에 취약하기 때문에 textConetent로 바꾸어준다!
+            h_tag.textContent = "textContent";
+            // 태그사이에 값을 넣어야 할땐 textcontent!
+        }
+    </script>
+</head>
+<body>
+<input id="res1" type="text" value="" placeholder="이름을 입력하세요"> <br>
+<!-- type="text"기본설정, value="미리 넣고싶은 값"-->
+<!-- id는 js에서 검색을 위한 용도로 사용된다. class쓰지 말기-->
+
+<input id="res2" placeholder="값"> <br>
+<!--타입을 기술하지 않으면 기본적으로 text타입을 갖게된다-->
+
+<input type="button" value="버튼1" onclick="test1();">
+<!--버튼1을 클릭하면 test1()메서드가 호출된다. test1()함수는 자바스크립트에서 만든다.-->
+
+<input type="button" value="버튼2" onclick="test2('안녕');">
+<!--test2함수에 10파라미터를 보냄-->
+
+<input type="button" value="버튼3" onclick="test3();">
+<h1 id="h1">value속성을 갖고있지 않은 h1</h1>
+
+
+</body>
+</html>

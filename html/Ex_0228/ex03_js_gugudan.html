@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>구구단</title>
+    <script !src="">
+
+
+        function start() {
+
+            let dan = document.getElementById("dan").value;
+            // .value를 붙여서 값을 꺼내옴
+            // input의 value는 기본적으로 문자열 구조이므로 더하기를 사용하면 이어붙어서 표기된다.
+            // 단, -,*,/,>,< 등은 따로 Number()형태로 변환하지 않아도 연산이 가능
+            //alert(dan + 1);
+
+            // 유효성체크 (무결성 체크)
+            let num_check = /^[2-9]+$/;
+            if(!num_check.test(dan)){
+                alert("2~9사이의 값만 입력하세요");
+                return;
+            }
+
+            // 아무것도 검색창에 입력하지 않은 경우 return
+            // if(dan.trim() == ' '){
+            //     alert("값을 입력해야 합니다.");
+            //     return;
+            // }
+            // // 2~9사이의 값이 아닐경우 return
+            // if(dan.trim()<2 || dan.trim() > 9){
+            //     alert("2~9사이의 값만 입력하세요");
+            //     return;
+            // }
+
+            // 구구단 생성
+            let str = "";
+            for(let i=1; i<=9; i++){
+                str += dan + " * " + i + " = " + (dan*i) + "<br>";
+            }//for
+
+            // 구구단을 넣을 div검색
+            let disp = document.getElementById("disp");
+            disp.innerHTML = str;
+
+        }
+
+
+    </script>
+    <style>
+        hr {
+            width: 300px;
+        }
+
+        #disp {
+            width: 300px;
+            height: 300px;
+            background: black;
+            color: antiquewhite;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<div>
+    단 : <input id="dan">
+    <input type="button" value="결과보기" onclick="start();">
+</div>
+<hr>
+<div id="disp"></div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery html</title>
+  <script src="js/jquery-3.6.3.min.js"></script>
+
+  <script>
+    $(function (){
+      $("#btn1").click(function () {
+        // #aa태그에 작성 되어있는 내용을 가져온다
+        let aa = $("#aa").html();
+        $("#aa").html("<h2>곧 점심시간이네</h2>");
+      });
+
+      $("#btn2").click(function () {
+        //btn2 눌렀을떄
+        // bb에 값이 없으면 빈값으로 대체하겠다는 의미
+        $("#bb").html("");
+      });
+
+      $("#btn3").click(function () {
+        //id가 없는 일반 p태그일 경우
+        //body에 있는 p태그 중 가장 위에있는 태그의 값을 가져올 수 있다
+        alert($("p").html());
+
+        $("p").css("border","1px solid red");
+      });
+    });
+  </script>
+</head>
+<body>
+<input type="button" value="btn1" id="btn1">
+<input type="button" value="btn2" id="btn2">
+<input type="button" value="btn3" id="btn3">
+
+<div id="aa">테스트용 문장</div>
+<div id="bb">오늘은 3월 2일</div>
+<p>내일은 세계북극곰 협회에서 지정한 일찍 끝나는 날</p>
+<p>너무 배고파요ㅠㅡㅠ</p>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery_calculator</title>
+    <!--    jQuery가져오기-->
+    <script src="js/jquery-3.6.3.min.js"></script>
+
+    <script !src="">
+        //메인처럼 사용되는 함수 영역
+        $(function () {
+            //#plus 버튼을 클릭하면 실행되는 함수
+            // $("#plus").click(function () {
+            //     //value값 가져오는 메서드
+            //     let num1 = $("#num1").val();
+            //     let num2 = $("#num2").val();
+            //     let result = $("#result").val(Number(num1) + Number(num2));
+            // });
+
+            $("#plus, #minus, #multi").click(function () {
+               // this는 현재 클릭을 발생시킨 객체
+                cal( $(this) );
+            })
+
+        });
+        function cal(op) {
+            let operator = op.val(); // 합, 차, 곱
+
+            let n1 = $("#num1").val();
+            let n2 = $("#num2").val();
+
+            n1 = Number(n1);
+            n2 = Number(n2);
+
+            switch (operator){
+                case "합":
+                    res = n1 + n2;
+                    break;
+                case "차":
+                    res = n1 - n2;
+                    break;
+                case "곱":
+                    res = n1 * n2;
+                    break;
+            }//switch
+            $("#result").val(res);
+        }
+
+    </script>
+</head>
+<body>
+<input id="num1" size="3"> +
+<input id="num2" size="3"> =
+<input id="result" size="5"> <br>
+<input type="button" name="" id="plus" value="합">
+<input type="button" name="" id="minus" value="차">
+<input type="button" name="" id="multi" value="곱">
+</body>
+</html>

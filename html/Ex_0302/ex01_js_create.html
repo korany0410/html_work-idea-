@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js에서 태그(요소)생성하기 </title>
+
+    <script>
+
+        let array = ["서울", "대전", "제주"];
+
+        //현재 html 문서가 실행되면 자동으로 호출되는 생성자와 같은 영역
+        //윈도우를 로드하자마자 열리는 함수!
+        window.onload = function (){
+            alert("페이지 로드완료");
+
+            //sido태그 검색
+            let sido = document.getElementById("sido");
+
+            //위에서 검색된 sido태그에 자식 요소인 opition태그를 생성하여 추가
+            for( let i = 0; i < array.length; i++){
+                //option태그를 직접 생성 (createElement : 요소 생성)
+                let opt = document.createElement("option");
+
+                // 생성된 <option>태그에 내용을 추가
+                opt.textContent = array[i];
+
+                //sido태그에 opt를 자식요소로 추가
+                sido.appendChild(opt);
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+<select id="sido">
+    <option>:::선호하는 지역:::</option>
+</select>
+
+<hr>
+
+<select name="" id="">
+    <option>:::메뉴선택:::</option>
+    <option>메뉴1</option>
+    <option>메뉴2</option>
+</select>
+</body>
+</html>

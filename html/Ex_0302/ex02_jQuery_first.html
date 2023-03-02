@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery를 시작해보자</title>
+
+    <!--  jQuery : js의 검색, 속성, 이벤트 등의 작업을 간단하게 처리 할 수 있도록 만들어진 언어-->
+    <!--jQuery 기능을 가져오는 코드1- : 온라인에서 링크를 가져오는 방식-->
+    <script src="http://code.jquery.com/jquery-3.6.3.js"></script>
+
+    <!-- jQuery 기능을 가져오는 코드2 : 저장된 jquery를 파일로 불러오는 방식-->
+    <!--    <script src="js/jquery-3.6.3.min.js"></script>-->
+
+
+    <script>
+        // jQuery사용을 위한 초기화 영역
+        //지금부터 스크립트가 시작됨과 동시에 함수 만들어서 사용하게 될거야
+        $(function () {
+            // alert("초기세팅 완료입니다");
+
+            //btn1을 클릭하면 함수 내부에 있는 영역이 실행
+            $("#btn1").click(function () {
+                alert("버튼 클릭됨");
+            });
+            //btn2을 클릭하면 함수 내부에 있는 영역이 실행
+            $("#btn2").click(function () {
+                //value값 가져오는 메서드
+                let msg = $("#msg").val();
+                //alert(msg);
+                $("#msg").val("aaaa");
+            });
+
+            //버튼3 클릭 시 testClick()함수를 호출하자
+            $("#btn3").click(testClick);
+
+            // class버튼4 클릭시에도 마찬가지로  testClick()함수를 호출가능
+            $(".btn4").click(testClick);
+        });
+
+        //예제 3d을 위한 함수
+        function testClick(){
+            alert("버튼3 클릭");
+        }
+
+
+    </script>
+</head>
+<body>
+<input id="msg"> <br>
+<input type="button" id="btn1" value="버튼1">
+<input type="button" id="btn2" value="메세지1">
+<input type="button" id="btn3" value="test">
+<input type="button" class="btn4" value="test class">
+
+</body>
+</html>

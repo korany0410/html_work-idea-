@@ -5,6 +5,9 @@
     <title>form 태그</title>
 
     <script !src="">
+
+        <!-- 3>1>2 순으로 많이 씀!! -->
+
         function check1() {
             //f1이라는 id를 가진 form 태그 검색
             let f = document.getElementById("f1");
@@ -36,7 +39,7 @@
             f.submit();
         }//check1()
 
-        function check2(){
+        function check2() {
 
             //name이 fff로 지정되어있는 form태그 가져오기
             let f = document.fff;
@@ -50,6 +53,20 @@
 
             f.submit();
         }//check2()
+
+        function check3(f) {
+            // 파라미터로 전달된 f객체가 form태그 그 자체
+            let id = f.id.value;
+            let pwd = f.pw.value;
+
+            //유효성 체크
+
+            f.method = "get";
+            f.action = "login.jsp";
+
+            //f태그가 가진 모든 name속성을 login.jsp에 파라미터로 전달
+            f.submit();
+        }
 
     </script>
 
@@ -89,5 +106,14 @@
     <input type="button" value="폼체크2" onclick="check2();">
 </form>
 <hr>
+
+<form>
+    id : <input name="id"> <br>
+    pwd : <input type="password" name="pw"> <br>
+
+    <!-- this  는 폼체크3 버튼을 의미한다.
+           this.form은 나를 포장하고있는 폼태그를 의미한다-->
+    <input type="button" value="폼체크3" onclick="check3(this.form);">
+</form>
 </body>
 </html>

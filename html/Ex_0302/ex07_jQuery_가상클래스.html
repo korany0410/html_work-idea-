@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 가상클래스</title>
+    <script src="http://code.jquery.com/jquery-3.6.3.js"></script>
+
+    <style>
+        table {
+            width: 200px;
+            margin-bottom: 15px;
+        }
+
+        #btn1 {
+            margin-left: 25px;
+        }
+
+        #btn2 {
+            margin-left: 55px;
+        }
+
+        .selectClass {
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+
+    <script>
+        $(function () {
+            $("tr:even").css("background", "pink");
+            $("tr:odd").css("background", "black")
+                .css("color", "white");
+
+            //btn1클릭 시 이벤트 처리
+            //첫째 tr태그에게 selectClass라는 클래스명을 추가
+            $("#btn1").click(function () {
+                $("tr:first").addClass("selectClass");
+            })
+
+            //btn2 클릭 시 클래스에 적용된 클래스명 빼기
+            $("#btn2").click(function () {
+                //첫째 tr태그에게 selectClass라는 클래스명을 추가
+                // removeClass로 클래스 지우기
+                $("tr:first").removeClass("selectClass");
+            });
+
+            // em표기법 ntt코드형태로 바꾼것
+            // eq : == (equal)
+            // gt : >  (greater than)
+            // lt : <  (less than)
+            // ge : >= (greater equal)
+            // le : <= (less equal)
+
+            //tr:eq(4) : tr중에서 4번째인것 찾아 (0번부터 셈)
+            $("tr:eq(4)").css("font-size", "30px");
+
+            //tr:lt(2) : tr중에서 2번보다 작은것들 찾아 ( 0,1번)
+            $("tr:lt(2)").css("color", "purple");
+        })
+    </script>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>one</td>
+    </tr>
+    <tr>
+        <td>two</td>
+    </tr>
+    <tr>
+        <td>three</td>
+    </tr>
+    <tr>
+        <td>four</td>
+    </tr>
+    <tr>
+        <td>five</td>
+    </tr>
+
+</table>
+<input type="button" name="" id="btn1" value="버튼">
+<input type="button" name="" id="btn2" value="제거">
+</body>
+</html>

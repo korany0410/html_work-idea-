@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery_this 자신의 하위요소로 접근하기</title>
+    <script src="http://code.jquery.com/jquery-3.6.3.js"></script>
+    <script>
+        $(function () {
+            $(".movie").css("border", "2px solid red")
+                .css("margin", "20px")
+
+            $(".movie").click(function () {
+                // this : 클릭을 발생시킨 태그
+                // msg = .movie의 p태그 안의 내용을 가져와
+                let msg = $(this).find("p").html();
+                alert(msg)
+            })
+
+        });
+    </script>
+</head>
+<body>
+<div>
+    <ul>
+        <li>
+            <div class="movie" id="movie1">
+                <p>귀멸의 칼날</p>
+            </div>
+        </li>
+        <li>
+            <div class="movie" id="movie2">
+                <p>스즈메의 문단속</p>
+            </div>
+        </li>
+        <li>
+            <div class="movie" id="movie3">
+                <p>아임히어로 더 파이널</p>
+            </div>
+        </li>
+        <li>
+            <div class="movie" id="movie4">
+                <p>대외비</p>
+            </div>
+        </li>
+        <li>
+            <div class="movie" id="movie5">
+                <p>더 퍼스트 슬램덩크</p>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

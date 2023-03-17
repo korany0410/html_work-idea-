@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>딸기 조아</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body {
+            position: relative;
+            overflow: hidden;
+        }
+
+        header {
+            position: absolute;
+            background-color: #eeeeee;
+            width: 50px;
+            height: 1000px;
+
+        }
+
+        header img {
+            width: 35px;
+            margin-top: 30px;
+            margin-left: 6px;
+        }
+
+        #main {
+            float: left;
+            margin-left: 50px;
+        }
+
+        #img img {
+            width: 800px;
+        }
+
+        #menu > a {
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+            margin-left: 80px;
+        }
+
+        table {
+            width: 600px;
+            margin-left: 100px;
+
+        }
+
+        caption {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        table tr td {
+            padding: 3px;
+        }
+
+        input {
+            width: 300px;
+        }
+
+        #email {
+            width: 190px;
+        }
+
+        #text {
+            height: 100px;
+        }
+
+        #question {
+            padding:2px;
+            width: 80px;
+            margin-left: 40px;
+
+        }
+        #reset{
+            padding:2px;
+            width: 80px;
+            margin-left: 223px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <ul>
+        <li><img src="image/icon.png" alt=""></li>
+        <li><img src="image/icon.png" alt=""></li>
+        <li><img src="image/icon.png" alt=""></li>
+        <li><img src="image/icon.png" alt=""></li>
+    </ul>
+</header>
+<div id="main">
+    <div id="img"><img src="image/딸기조아.png" alt=""></div>
+    <div id="menu">
+        <a href="#">HOME</a>
+        <a href="#">COFFEE</a>
+        <a href="#">CF</a>
+        <a href="#">PRINT</a>
+        <a href="#">문의하기</a>
+    </div>
+    <HR>
+    <div>
+        <table>
+            <caption>제품 문의하기</caption>
+            <tr>
+                <th>제목</th>
+                <td><input type="text" name="" id="title"></td>
+            </tr>
+            <tr>
+                <th>작성자</th>
+                <td><input type="text" name="" id="writer"></td>
+            </tr>
+            <tr>
+                <th>답변받을 이메일</th>
+                <td>
+                    <input type="text" name="" id="email">
+                    @
+                    <select>
+                        <option value="gmail">gmail.com</option>
+                        <option value="naver">naver.com</option>
+                        <option value="daum">daum.net</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>문의내용</th>
+                <td><input type="text" name="" id="text"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="문의하기" name="" id="question"></td>
+                <td><input type="button" value="초기화" name="" id="reset"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

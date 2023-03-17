@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery_css 속성선택자</title>
+    <script src="http://code.jquery.com/jquery-3.6.3.js"></script>
+    <script>
+        //jQuery사용을 위한 초기화 영역
+        $(function () {
+            $("#content-1").css("background","pink")
+                            .css("color","white");
+
+            // 선택자를 이용하면 마치 클래스로 정의된 것처럼 동시에 여러가지를 바꿀 수 있다
+            //선택자 ^= : 해당 문자('vi')로 시작되는 id를 모두 찾으시오
+            $("div[id^='vi']").css("background","gray")
+            $("div[id^='vi']").css("color","white");
+
+            //선택자 *= : 해당 문자('tent')를 포함하는 태그를 찾으시오
+            $("div[id*='tent']").css("background","black")
+                                .css("color","white");
+
+            //선택자 $= : 해당값('1')으로 끝나는 태그를 찾으시오
+            $("div[di$='1']").css("background","pink");
+
+
+        });
+    </script>
+</head>
+<body>
+<h2>jQuery 속성 선택자</h2>
+<div>
+    <div id="content-1">div 테스트 1</div>
+    <div id="content-2">div 테스트 2</div>
+    <div id="view-1">div view 테스트1</div>
+    <div id="content-3">div content 3</div>
+</div>
+</body>
+</html>

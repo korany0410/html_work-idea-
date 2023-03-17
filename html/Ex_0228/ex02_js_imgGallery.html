@@ -14,8 +14,7 @@
                 num = 1;
             }
             //gallery라는 id를 가진 요소로 검색 접근하여 src경로를 변경
-            let img = document.getElementById("gallery");
-            gallery.src = path + num + ".jpg";
+            document.getElementById("gallery").src = path + num + ".jpg";
         }
         function prev(){
             num--;
